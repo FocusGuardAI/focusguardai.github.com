@@ -37,6 +37,7 @@
             background-color: var(--primary);
             color: var(--text-primary);
             overflow-x: hidden;
+            padding-top: 80px; /* Ruimte voor vaste header */
         }
 
         .container {
@@ -47,13 +48,15 @@
 
         /* Header & Navigation */
         header {
-            background-color: var(--secondary);
-            padding: 20px 0;
+            background-color: rgba(20, 20, 20, 0.95);
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             z-index: 1000;
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            top: 0;
+            left: 0;
         }
 
         nav {
@@ -90,6 +93,7 @@
             font-weight: 500;
             transition: color 0.3s;
             position: relative;
+            font-size: 16px;
         }
 
         .nav-link:hover {
@@ -121,6 +125,7 @@
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 5px 15px rgba(217, 184, 92, 0.3);
+            font-size: 16px;
         }
 
         .cta-button:hover {
@@ -130,7 +135,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 160px 0 100px;
+            padding: 100px 0 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -208,7 +213,7 @@
 
         /* Section Styling */
         section {
-            padding: 100px 0;
+            padding: 80px 0;
         }
 
         .section-header {
@@ -433,66 +438,6 @@
             font-size: 14px;
         }
 
-        /* Pricing */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .pricing-card {
-            text-align: center;
-            padding: 40px 30px;
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            border: 2px solid var(--accent);
-        }
-
-        .pricing-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--accent);
-            color: var(--primary);
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        .pricing-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .pricing-price {
-            font-size: 48px;
-            font-weight: 300;
-            margin-bottom: 30px;
-        }
-
-        .pricing-price span {
-            font-size: 18px;
-            color: var(--text-secondary);
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .pricing-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-
         /* FAQ */
         .faq-grid {
             max-width: 800px;
@@ -523,6 +468,44 @@
 
         .faq-item.active .faq-answer {
             max-height: 200px;
+        }
+
+        /* Download Section */
+        .download-section {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary), var(--deep-charcoal));
+        }
+
+        .download-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .download-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            border-radius: 12px;
+            background: var(--secondary);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, background 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .download-button:hover {
+            transform: translateY(-5px);
+            background: var(--deep-charcoal);
+        }
+
+        .download-button i {
+            font-size: 24px;
         }
 
         /* Footer */
@@ -603,6 +586,14 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+            
+            header {
+                padding: 12px 0;
+            }
+            
             .nav-links {
                 display: none;
             }
@@ -623,6 +614,47 @@
             .section-title {
                 font-size: 32px;
             }
+            
+            .download-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .download-button {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: block;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(20, 20, 20, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 20px;
+                gap: 15px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
         }
     </style>
 </head>
@@ -637,13 +669,16 @@
                     </div>
                     <div class="logo-text">FocusGuard</div>
                 </div>
-                <div class="nav-links">
+                <button class="mobile-menu-button" id="mobileMenuButton">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
                     <a href="#features" class="nav-link">Features</a>
                     <a href="#how-it-works" class="nav-link">How It Works</a>
                     <a href="#testimonials" class="nav-link">Testimonials</a>
-                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#download" class="nav-link">Download</a>
                 </div>
-                <button class="cta-button">Download Now</button>
+                <button class="cta-button">Get Started</button>
             </nav>
         </div>
     </header>
@@ -655,7 +690,7 @@
             <p>FocusGuard combines cutting-edge productivity techniques with engaging gamification to help you achieve deep focus and accomplish your most important work.</p>
             <div class="hero-buttons">
                 <button class="cta-button">
-                    <i class="fab fa-apple"></i> Download on App Store
+                    <i class="fab fa-apple"></i> Download Now
                 </button>
                 <button class="secondary-button">Watch Demo</button>
             </div>
@@ -843,50 +878,28 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" style="background-color: var(--secondary);">
+    <!-- Download Section -->
+    <section id="download" class="download-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Simple, Transparent Pricing</h2>
-                <p class="section-subtitle">Choose the plan that works best for your focus journey</p>
+                <h2 class="section-title">Get FocusGuard Today</h2>
+                <p class="section-subtitle">Start your journey to better focus and productivity</p>
             </div>
-            <div class="pricing-grid">
-                <div class="glass-panel pricing-card">
-                    <h3 class="pricing-title">Free</h3>
-                    <div class="pricing-price">$0<span>/forever</span></div>
-                    <ul class="pricing-features">
-                        <li>Basic Focus Timer</li>
-                        <li>Limited App Blocking</li>
-                        <li>Progress Tracking</li>
-                        <li>Standard Themes</li>
-                    </ul>
-                    <button class="secondary-button">Get Started</button>
-                </div>
-                <div class="glass-panel pricing-card featured">
-                    <div class="pricing-badge">MOST POPULAR</div>
-                    <h3 class="pricing-title">Pro</h3>
-                    <div class="pricing-price">$4.99<span>/month</span></div>
-                    <ul class="pricing-features">
-                        <li>Advanced Focus Timer</li>
-                        <li>Unlimited App Blocking</li>
-                        <li>AI Assistant</li>
-                        <li>All Premium Themes</li>
-                        <li>Challenges & Gamification</li>
-                        <li>Priority Support</li>
-                    </ul>
-                    <button class="cta-button">Try 7 Days Free</button>
-                </div>
-                <div class="glass-panel pricing-card">
-                    <h3 class="pricing-title">Lifetime</h3>
-                    <div class="pricing-price">$49<span>/one-time</span></div>
-                    <ul class="pricing-features">
-                        <li>All Pro Features</li>
-                        <li>Lifetime Updates</li>
-                        <li>Exclusive Themes</li>
-                        <li>Early Access to Features</li>
-                    </ul>
-                    <button class="secondary-button">Get Lifetime</button>
-                </div>
+            <div class="download-options">
+                <a href="#" class="download-button">
+                    <i class="fab fa-apple"></i>
+                    <div>
+                        <div style="font-size: 14px;">Download on the</div>
+                        <div>App Store</div>
+                    </div>
+                </a>
+                <a href="#" class="download-button">
+                    <i class="fab fa-google-play"></i>
+                    <div>
+                        <div style="font-size: 14px;">Get it on</div>
+                        <div>Google Play</div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -928,25 +941,14 @@
                 </div>
                 <div class="glass-panel faq-item">
                     <div class="faq-question">
-                        What happens if I cancel my subscription?
+                        Is FocusGuard free to use?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        If you cancel your Pro subscription, you'll revert to the Free plan at the end of your billing cycle. You'll keep access to all premium features until then, and won't be charged again.
+                        FocusGuard offers a free version with basic features, and a premium version with advanced functionality like unlimited app blocking, AI assistant, and all premium themes.
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section style="background: linear-gradient(135deg, var(--primary), var(--deep-charcoal)); text-align: center;">
-        <div class="container">
-            <h2 style="font-size: 42px; font-weight: 300; margin-bottom: 20px;">Ready to Transform Your Focus?</h2>
-            <p style="font-size: 18px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 40px;">Join thousands of professionals, students, and creators who have already mastered their focus with FocusGuard.</p>
-            <button class="cta-button" style="font-size: 18px; padding: 15px 30px;">
-                <i class="fab fa-apple"></i> Download FocusGuard
-            </button>
         </div>
     </section>
 
@@ -966,10 +968,10 @@
                 <div class="footer-column">
                     <h3>Product</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#download">Download</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1092,8 +1094,26 @@
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
+                    
+                    // Close mobile menu if open
+                    navLinks.classList.remove('active');
                 }
             });
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav') && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
         });
     </script>
 </body>
