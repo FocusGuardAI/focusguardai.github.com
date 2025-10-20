@@ -372,49 +372,6 @@
             display: block;
         }
 
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            padding: 30px;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .author-info h4 {
-            margin-bottom: 5px;
-        }
-
-        .author-info p {
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-
         /* FAQ */
         .faq-grid {
             max-width: 800px;
@@ -652,7 +609,6 @@
                 <div class="nav-links" id="navLinks">
                     <a href="#features" class="nav-link">Features</a>
                     <a href="#how-it-works" class="nav-link">How It Works</a>
-                    <a href="#testimonials" class="nav-link">Testimonials</a>
                     <a href="#download" class="nav-link">Download</a>
                 </div>
                 <button class="cta-button">Get Started</button>
@@ -789,48 +745,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What Users Say</h2>
-                <p class="section-subtitle">Discover how FocusGuard has helped people improve their focus and productivity</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="glass-panel testimonial-card">
-                    <p class="testimonial-text">"The app blocking feature has been a game-changer for my productivity. I can finally focus without constantly checking my phone."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AJ</div>
-                        <div class="author-info">
-                            <h4>Alex Johnson</h4>
-                            <p>Freelance Designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-panel testimonial-card">
-                    <p class="testimonial-text">"As a student, the Pomodoro technique combined with the gamification elements has made studying much more engaging and effective."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SW</div>
-                        <div class="author-info">
-                            <h4>Sam Wilson</h4>
-                            <p>University Student</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-panel testimonial-card">
-                    <p class="testimonial-text">"The progress tracking helps me understand my focus patterns, and the AI assistant gives practical tips that actually work."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MP</div>
-                        <div class="author-info">
-                            <h4>Maria Perez</h4>
-                            <p>Project Manager</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Download Section -->
     <section id="download" class="download-section">
         <div class="container">
@@ -914,7 +828,6 @@
                     <ul class="footer-links">
                         <li><a href="#features">Features</a></li>
                         <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#download">Download</a></li>
                     </ul>
                 </div>
