@@ -346,29 +346,6 @@
             color: white;
         }
 
-        /* Stats Section */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        .stat-value {
-            font-size: 42px;
-            font-weight: 300;
-            margin-bottom: 10px;
-        }
-
-        .stat-title {
-            font-size: 18px;
-            color: var(--text-secondary);
-        }
-
         /* Screenshots */
         .screenshots {
             display: flex;
@@ -776,30 +753,6 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section>
-        <div class="container">
-            <div class="stats-grid">
-                <div class="glass-panel stat-card">
-                    <div class="stat-value">98%</div>
-                    <div class="stat-title">User Satisfaction</div>
-                </div>
-                <div class="glass-panel stat-card">
-                    <div class="stat-value">2.5M+</div>
-                    <div class="stat-title">Focus Sessions</div>
-                </div>
-                <div class="glass-panel stat-card">
-                    <div class="stat-value">47%</div>
-                    <div class="stat-title">Productivity Increase</div>
-                </div>
-                <div class="glass-panel stat-card">
-                    <div class="stat-value">4.9</div>
-                    <div class="stat-title">App Store Rating</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Screenshots Section -->
     <section style="background-color: var(--secondary);">
         <div class="container">
@@ -840,37 +793,37 @@
     <section id="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Loved By Professionals</h2>
-                <p class="section-subtitle">See what our users are saying about their transformed productivity</p>
+                <h2 class="section-title">What Users Say</h2>
+                <p class="section-subtitle">Discover how FocusGuard has helped people improve their focus and productivity</p>
             </div>
             <div class="testimonials-grid">
                 <div class="glass-panel testimonial-card">
-                    <p class="testimonial-text">"FocusGuard has completely transformed how I work. The app blocking feature alone has saved me hours of wasted time each week."</p>
+                    <p class="testimonial-text">"The app blocking feature has been a game-changer for my productivity. I can finally focus without constantly checking my phone."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SD</div>
+                        <div class="author-avatar">AJ</div>
                         <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Software Developer</p>
+                            <h4>Alex Johnson</h4>
+                            <p>Freelance Designer</p>
                         </div>
                     </div>
                 </div>
                 <div class="glass-panel testimonial-card">
-                    <p class="testimonial-text">"As a student, maintaining focus during study sessions was always a struggle. The gamification elements in FocusGuard made building consistent habits actually enjoyable."</p>
+                    <p class="testimonial-text">"As a student, the Pomodoro technique combined with the gamification elements has made studying much more engaging and effective."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">MR</div>
+                        <div class="author-avatar">SW</div>
                         <div class="author-info">
-                            <h4>Michael Rodriguez</h4>
-                            <p>Graduate Student</p>
+                            <h4>Sam Wilson</h4>
+                            <p>University Student</p>
                         </div>
                     </div>
                 </div>
                 <div class="glass-panel testimonial-card">
-                    <p class="testimonial-text">"The AI assistant provides surprisingly helpful productivity advice. It's like having a personal coach that understands my work patterns and challenges."</p>
+                    <p class="testimonial-text">"The progress tracking helps me understand my focus patterns, and the AI assistant gives practical tips that actually work."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">EC</div>
+                        <div class="author-avatar">MP</div>
                         <div class="author-info">
-                            <h4>Emily Chen</h4>
-                            <p>Marketing Director</p>
+                            <h4>Maria Perez</h4>
+                            <p>Project Manager</p>
                         </div>
                     </div>
                 </div>
@@ -937,15 +890,6 @@
                     </div>
                     <div class="faq-answer">
                         Currently, FocusGuard is only available for iOS devices. We're working on a macOS version that will sync with your iOS device for a seamless experience across Apple devices.
-                    </div>
-                </div>
-                <div class="glass-panel faq-item">
-                    <div class="faq-question">
-                        Is FocusGuard free to use?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        FocusGuard offers a free version with basic features, and a premium version with advanced functionality like unlimited app blocking, AI assistant, and all premium themes.
                     </div>
                 </div>
             </div>
