@@ -712,7 +712,7 @@
                         <i class="fas fa-palette"></i>
                     </div>
                     <h3 class="feature-title">Custom Themes</h3>
-                    <p class="feature-description">Personalize your experience with multiple premium themes including dark, light, gold, and more.</p>
+                    <p class="feature-description">Personalize your experience with multiple themes including dark, light, gold, and more.</p>
                 </div>
             </div>
         </div>
@@ -837,7 +837,6 @@
                         <ul>
                             <li>Analytics services to understand app performance and usage patterns</li>
                             <li>Cloud storage providers for optional data synchronization</li>
-                            <li>Payment processors for premium features (if applicable)</li>
                         </ul>
                         <p>All third-party services are carefully vetted to ensure they meet our privacy standards.</p>
                     </div>
