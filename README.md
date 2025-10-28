@@ -850,7 +850,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2023 FocusGuard. All rights reserved.
+                &copy; 2025 FocusGuard. All rights reserved.
             </div>
         </div>
     </footer>
