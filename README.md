@@ -863,8 +863,7 @@
                     <div class="privacy-section">
                         <h3>Contact Us</h3>
                         <p>If you have any questions about our privacy practices or this policy, please contact our privacy team at:</p>
-                        <p>Email: privacy@focusguard.app</p>
-                        <p>Address: FocusGuard Privacy Team, 123 Productivity Lane, San Francisco, CA 94105</p>
+                        <p>Email: focusguardai@gmail.com</p>
                     </div>
                 </div>
             </div>
