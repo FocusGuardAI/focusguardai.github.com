@@ -518,6 +518,39 @@
             font-size: 14px;
         }
 
+        /* Privacy Policy Section */
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+
+        .privacy-section h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .privacy-section p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .privacy-section ul {
+            color: var(--text-secondary);
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             body {
@@ -610,6 +643,7 @@
                     <a href="#features" class="nav-link">Features</a>
                     <a href="#how-it-works" class="nav-link">How It Works</a>
                     <a href="#download" class="nav-link">Download</a>
+                    <a href="#privacy-policy" class="nav-link">Privacy</a>
                 </div>
                 <button class="cta-button">Get Started</button>
             </nav>
@@ -771,6 +805,73 @@
         </div>
     </section>
 
+    <!-- Privacy Policy Section -->
+    <section id="privacy-policy">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Privacy Policy</h2>
+                <p class="section-subtitle">Your privacy is important to us. Learn how we protect your data.</p>
+            </div>
+            <div class="privacy-content">
+                <div class="glass-panel">
+                    <div class="privacy-section">
+                        <h3>Data Collection and Use</h3>
+                        <p>FocusGuard is designed with your privacy in mind. We collect minimal data necessary to provide our services:</p>
+                        <ul>
+                            <li>Focus session data (duration, type, completion status) to track your progress</li>
+                            <li>App usage statistics to improve our features and user experience</li>
+                            <li>Optional account information if you choose to create an account</li>
+                        </ul>
+                        <p>We do not sell your personal data to third parties. Your focus data is used solely to provide you with insights and improve your productivity experience.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>Data Storage and Security</h3>
+                        <p>Your data is stored securely on encrypted servers. We implement industry-standard security measures to protect your information from unauthorized access, alteration, or destruction.</p>
+                        <p>Focus session data is primarily stored locally on your device. Cloud synchronization is optional and requires your explicit consent.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>Third-Party Services</h3>
+                        <p>FocusGuard may integrate with third-party services for specific functionality:</p>
+                        <ul>
+                            <li>Analytics services to understand app performance and usage patterns</li>
+                            <li>Cloud storage providers for optional data synchronization</li>
+                            <li>Payment processors for premium features (if applicable)</li>
+                        </ul>
+                        <p>All third-party services are carefully vetted to ensure they meet our privacy standards.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>Your Rights</h3>
+                        <p>You have the right to:</p>
+                        <ul>
+                            <li>Access the personal data we hold about you</li>
+                            <li>Request correction of inaccurate data</li>
+                            <li>Request deletion of your data</li>
+                            <li>Export your data in a portable format</li>
+                            <li>Opt out of non-essential data collection</li>
+                        </ul>
+                        <p>To exercise any of these rights, please contact us at privacy@focusguard.app.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>Policy Updates</h3>
+                        <p>We may update this privacy policy from time to time. We will notify you of any significant changes through the app or via email. Continued use of FocusGuard after changes constitutes acceptance of the updated policy.</p>
+                        <p><strong>Last updated:</strong> January 2025</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>Contact Us</h3>
+                        <p>If you have any questions about our privacy practices or this policy, please contact our privacy team at:</p>
+                        <p>Email: privacy@focusguard.app</p>
+                        <p>Address: FocusGuard Privacy Team, 123 Productivity Lane, San Francisco, CA 94105</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ Section -->
     <section>
         <div class="container">
@@ -794,7 +895,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        Yes, we take privacy seriously. All your focus data is stored locally on your device and is never shared with third parties without your explicit permission.
+                        Yes, we take privacy seriously. All your focus data is stored locally on your device and is never shared with third parties without your explicit permission. For more details, see our <a href="#privacy-policy" style="color: var(--accent);">Privacy Policy</a>.
                     </div>
                 </div>
                 <div class="glass-panel faq-item">
@@ -843,7 +944,7 @@
                 <div class="footer-column">
                     <h3>Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#privacy-policy">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Cookie Policy</a></li>
                     </ul>
